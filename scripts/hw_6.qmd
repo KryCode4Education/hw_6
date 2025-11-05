@@ -1,17 +1,19 @@
 ---
-title: "hw_6"
-format: html
+title: "Homework 6"
+format: pdf
 authors: "Febe Lin, Ramtin Ranjpour, & James Phillips"
 editor: visual
+bibliography: hw6-references.bib
+link-citations: true
 execute:
+  eval: true
   echo: false
   fig-width: 6.5
   fig-height: 8
-output:
-  pdf_document:
 ---
 
 ```{r}
+#| include: false
 library(here)
 library(tidyverse)
 library(rio)
@@ -21,3 +23,7 @@ library(rio)
 star <- import(here("data/star.csv"))
 ```
 
+The authors of this homework would like to thank @R, @here, @tidyverse, and @rio for their technological contributions. Though this specific publication did not directly contribute, we would like to thank its authors [@nese2017two] for their moral support and guidance.
+
+\newpage
+# References
