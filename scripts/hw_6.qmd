@@ -1,0 +1,16 @@
+---
+title: "hw_6"
+format: html
+editor: visual
+execute:
+  echo: false
+  fig-width: 6.5
+  fig-height: 8
+output:
+  pdf_document:
+---
+
+```{r}
+
+```
+
