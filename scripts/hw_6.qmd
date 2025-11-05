@@ -1,6 +1,7 @@
 ---
 title: "hw_6"
 format: html
+authors: "Febe Lin, Ramtin Ranjpour, & James Phillips"
 editor: visual
 execute:
   echo: false
@@ -11,6 +12,12 @@ output:
 ---
 
 ```{r}
+library(here)
+library(tidyverse)
+library(rio)
+```
 
+```{r}
+star <- import(here("data/star.csv"))
 ```
 
