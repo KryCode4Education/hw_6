@@ -8,11 +8,12 @@ link-citations: true
 execute:
   eval: true
   echo: false
+  warning: false
   fig-width: 6.5
   fig-height: 8
 ---
 
-# Commit 1
+# 
 
 ```{r}
 #| include: false
@@ -25,19 +26,11 @@ library(rio)
 star <- import(here("data/star.csv"))
 ```
 
-# Commit 2
-
 The authors of this homework would like to thank @R, @here, @tidyverse, and @rio for their technological contributions. Though this specific publication did not directly contribute, we would like to thank its authors [@nese2017two] for their moral support and guidance.
 
 \newpage
 
-# Commit 3
-
-# Commit 4
-
 ```{r, fig.width=5, fig.height=7}
-str(star)
-
 
 ggplot(star, aes(x = totexp, y = tmathss)) +
   geom_point(color = "grey60", alpha = 0.3, size = 0.3) +
@@ -57,6 +50,10 @@ ggplot(star, aes(x = totexp, y = tmathss)) +
 
 
 ```
+
+# Discussion
+
+The scatterplot with fitted regression lines shows a positive relationship between teacher experience and students\' math achievement. Students taught by more experienced teachers score higher. Additionally, students who pay for lunch consistently score higher than those receiving free/reduced-price lunch across all levels of teacher experience.
 
 # References
 
