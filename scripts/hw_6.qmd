@@ -12,6 +12,8 @@ execute:
   fig-height: 8
 ---
 
+# Commit 1
+
 ```{r}
 #| include: false
 library(here)
@@ -23,7 +25,39 @@ library(rio)
 star <- import(here("data/star.csv"))
 ```
 
+# Commit 2
+
 The authors of this homework would like to thank @R, @here, @tidyverse, and @rio for their technological contributions. Though this specific publication did not directly contribute, we would like to thank its authors [@nese2017two] for their moral support and guidance.
 
 \newpage
+
+# Commit 3
+
+# Commit 4
+
+```{r, fig.width=5, fig.height=7}
+str(star)
+
+
+ggplot(star, aes(x = totexp, y = tmathss)) +
+  geom_point(color = "grey60", alpha = 0.3, size = 0.3) +
+  geom_smooth(aes(color = frl), method = "lm", se = TRUE, size = 1.1, alpha = 0.2) +
+  scale_color_discrete(
+    name = "Lunch status",
+    labels = c("Paid Meals", "Free/Reduced Price Meals")
+  ) +
+  labs(
+    x = "Teacher Experience (years)",
+    y = "Total Math Scale Score",
+    title = "Relation between teacher experience and math scores",
+    subtitle = "Separate regression lines displayed by free/reduced price lunch status"
+  ) +
+  theme_minimal(base_size = 10) +
+  theme(legend.position = "bottom")
+
+
+```
+
 # References
+
+# 
