@@ -13,20 +13,6 @@ execute:
   fig-height: 8
 ---
 
-# 
-
-library(here)
-
-library(tidyverse)
-
-library(rio)
-
-library(here)
-
-library(tidyverse)
-
-library(rio)
-
 ```{r}
 #| include: false
 library(here)
@@ -41,8 +27,6 @@ star <- import(here("data/star.csv"))
 The authors of this homework would like to thank @R, @here, @tidyverse, and @rio for their technological contributions. Though this specific publication did not directly contribute, we would like to thank its authors [@nese2017two] for their moral support and guidance.
 
 ```{r}
-
-star <- read.csv("C:/Users/ramti/Desktop/hw_6/data/star.csv")
 
 summary_table <- star |>
   group_by(sex, frl) |>
@@ -59,9 +43,7 @@ summary_table_df
 # Used the round() function to view the results only up to two decimals
 ```
 
-\newpage
-
-```{r, fig.width=5, fig.height=7}
+```{r,fig.width=5, fig.height=7}
 
 ggplot(star, aes(x = totexp, y = tmathss)) +
   geom_point(color = "grey60", alpha = 0.3, size = 0.3) +
@@ -78,8 +60,6 @@ ggplot(star, aes(x = totexp, y = tmathss)) +
   ) +
   theme_minimal(base_size = 10) +
   theme(legend.position = "bottom")
-
-
 ```
 
 # Discussion
