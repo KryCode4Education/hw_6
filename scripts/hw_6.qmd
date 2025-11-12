@@ -28,6 +28,13 @@ The authors of this homework would like to thank @R, @here, @tidyverse, and @rio
 
 ```{r}
 
+<<<<<<< Updated upstream
+=======
+library(knitr)
+
+star <- read.csv("C:/Users/ramti/Desktop/hw_6/data/star.csv")
+
+>>>>>>> Stashed changes
 summary_table <- star |>
   group_by(sex, frl) |>
   summarize(
@@ -37,10 +44,16 @@ summary_table <- star |>
     rdg_sd = round(sd(treadss, na.rm = TRUE), 2)
     )
 
-summary_table_df <- as.data.frame(summary_table)
-summary_table_df
-
 # Used the round() function to view the results only up to two decimals
+
+kable(
+  summary_table,
+  booktabs = TRUE,
+  align    = c("l","l","r","r","r","r"),
+  row.names = FALSE
+)
+
+# The table shows that, on average, girls scored slightly higher than boys in both math and reading. Also, students not receiving FRL from higher-income families outperformed those from lower-income ones. Lastly, the SDs are relatively similar across groups, meaning score differences within each group were about the same.
 ```
 
 ```{r,fig.width=5, fig.height=7}
