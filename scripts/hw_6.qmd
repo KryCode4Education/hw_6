@@ -15,6 +15,18 @@ execute:
 
 # 
 
+library(here)
+
+library(tidyverse)
+
+library(rio)
+
+library(here)
+
+library(tidyverse)
+
+library(rio)
+
 ```{r}
 #| include: false
 library(here)
@@ -27,6 +39,25 @@ star <- import(here("data/star.csv"))
 ```
 
 The authors of this homework would like to thank @R, @here, @tidyverse, and @rio for their technological contributions. Though this specific publication did not directly contribute, we would like to thank its authors [@nese2017two] for their moral support and guidance.
+
+```{r}
+
+star <- read.csv("C:/Users/ramti/Desktop/hw_6/data/star.csv")
+
+summary_table <- star |>
+  group_by(sex, frl) |>
+  summarize(
+    math_mean = round(mean(tmathss, na.rm = TRUE), 2),
+    math_sd = round(sd(tmathss, na.rm = TRUE), 2),
+    rdg_mean = round(mean(treadss, na.rm = TRUE), 2),
+    rdg_sd = round(sd(treadss, na.rm = TRUE), 2)
+    )
+
+summary_table_df <- as.data.frame(summary_table)
+summary_table_df
+
+# Used the round() function to view the results only up to two decimals
+```
 
 \newpage
 
@@ -53,7 +84,7 @@ ggplot(star, aes(x = totexp, y = tmathss)) +
 
 # Discussion
 
-The scatterplot with fitted regression lines shows a positive relationship between teacher experience and students\' math achievement. Students taught by more experienced teachers score higher. Additionally, students who pay for lunch consistently score higher than those receiving free/reduced-price lunch across all levels of teacher experience.
+The scatterplot with fitted regression lines shows a positive relationship between teacher experience and students' math achievement. Students taught by more experienced teachers score higher. Additionally, students who pay for lunch consistently score higher than those receiving free/reduced-price lunch across all levels of teacher experience.
 
 # References
 
