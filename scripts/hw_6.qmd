@@ -28,13 +28,10 @@ The authors of this homework would like to thank @R, @here, @tidyverse, and @rio
 
 ```{r}
 
-<<<<<<< Updated upstream
-=======
 library(knitr)
 
 star <- read.csv("C:/Users/ramti/Desktop/hw_6/data/star.csv")
 
->>>>>>> Stashed changes
 summary_table <- star |>
   group_by(sex, frl) |>
   summarize(
